@@ -1,0 +1,47 @@
+{{!-- <div class="container" style="margin-top: 20px;">
+  <div class="row">
+    {{#each product}}
+    <div class="col-sm-3" style="margin-left: 0px; height: 500px">
+      <div class="card" style="width: 18rem; height:80%">
+  <img src="/images/product/{{this.Image}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h6 class="card-title">{{this.Product_id}}</h6>
+    <h5 class="card-title">{{this.Product_name}}</h5>
+    {{!-- <p class="card-text">{{this.Description}}</p> --}}
+    
+{{!-- 
+    
+  </div>
+  <div class="bottom" >
+    <a href="/users/readNow/{{this.id}}" class="btn btn-danger">ReadNow</a> --}}
+     {{!-- <a href="" class="btn btn-warning">Buy Now</a> --}}
+    {{!-- </div>
+</div>
+    </div>
+    {{/each}}
+  </div>
+</div> --}}
+
+
+<div style="height: 200px;">
+
+
+  <div class="row">
+  {{#each product}}
+    <div class="col-sm-3">
+
+      <div class="card" style="width: 18rem;">
+  <img src="https://cdn4.vectorstock.com/i/1000x1000/47/93/person-icon-iconic-design-vector-18314793.jpg" style="height: 160px;" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">{{this.user_name}}</p>
+    <p class="card-text">Author : <b>{{this.email}}</b></p>
+       <p class="card-text">Author : <b>{{this.mobile}}</b></p>
+         <p class="card-text">Publisher : <b>{{this.price}}</b></p>
+    <a href="/delete/{{this.id}}" class="btn btn-danger">Delete User</a>
+  </div>
+</div>
+    </div>
+  {{/each}}
+  </div>
+</div>
+

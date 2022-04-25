@@ -1,0 +1,21 @@
+{{>userHeader}}
+<div style="height: 200px;">
+
+
+  <div class="row">
+  {{#each product}}
+    <div class="col-sm-3">
+
+      <div class="card" style="width: 18rem;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzNfslM8Jg3xVNz5oyhm-SBMP62wx5J4HNTVBqkYaW-0XBzdmuJ4LLGaJCa_mih6OEPE0&usqp=CAU" style="height: 160px;" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">{{this.authorName}}</p>
+     <p class="card-text">Author : <b>{{this.authorId}}</b></p>
+    <p class="card-text">Author : <b>{{this.authorName}}</b></p>
+    <a href="/users/unfollow/{{this.authorId}}" class="btn btn-outline-danger">Unfollow</a>
+  </div>
+</div>
+    </div>
+  {{/each}}
+  </div>
+</div>

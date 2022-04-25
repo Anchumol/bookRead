@@ -1,0 +1,32 @@
+<div class="container" >
+  
+    <div class="card mb-3" style="max-width:50%;">
+  <div class="row g-0  ">
+    
+  
+      
+    <div class="col-md-4 cart"  style="margin-top: 10px;">
+      <img src="/images/product/{{payDetails.img}}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8 cart"  style="margin-top: 10px;">
+      <div class="card-body">
+        
+        <p class="card-text">{{payDetails.totalAmount}}</p>
+        <p class="card-text">Total Number of {{payDetails.qnty}} </p>
+        <p class="card-text">{{payDetails.mail_id}}</p>
+     
+        <div class="row g-3">
+  <div class="col">
+   <a href="/" class="btn btn-primary">ORDER</a>
+  </div>
+  {{!-- <div class="col">
+    <a href="/users/remove/{{this.Id}}" class="btn btn-danger">Remove Item</a>
+  </div> --}}
+</div>
+      </div>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+    

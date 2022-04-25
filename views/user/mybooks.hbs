@@ -1,0 +1,22 @@
+{{>userHeader}}
+
+
+<div style="height: 200px;">
+
+
+  <div class="row">
+  {{#each product}}
+    <div class="col-sm-3">
+
+      <div class="card" style="width: 18rem;">
+  <img src="/images/product/{{this.Image}}" style="height: 160px;" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">{{this.Product_name}}</p>
+    <a href="/users/readNow/{{this.id}}" class="btn btn-danger">ReadNow</a>
+  </div>
+</div>
+    </div>
+  {{/each}}
+  </div>
+</div>
+

@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<nav class="navbar navbar-expand-lg navbar-light $gray-400: #ced4da;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/users/" style="color: black;"  style="margin-left: 100px;" >BOOK READ </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+      <div  class="row g-3 align-items-center">
+  <div class="col-auto">
+     </div>
+
+      <div class="col-auto" style="margin-left: 100px;" >
+    <input  type="text" style="width: 200px;" id="inputPassword6" placeholder="Search for properties and more"  class="form-control" aria-describedby="passwordHelpInline">
+    </div>
+  
+  <div class="col-auto">
+      {{#if user}}
+         <a href="/users/addProduct" class="btn btn-light ">Write Book</a>
+         <a href="/users/mybooks" class="btn btn-light ">MyBooks</a>
+          <a href="/users/authors" class="btn btn-light ">Authors</a>
+          <a href="/users/followers" class="btn btn-light ">Followers</a>
+          <a href="/users/Following" class="btn btn-light ">Following</a>
+          <a href="/users/paymentR" class="btn btn-light ">Payment</a>
+      {{else}}
+    <span id="passwordHelpInline" class="form-text">
+       <a href="/users/userLogin" style="margin-left: 30px; width: 150px;" class="btn btn-light" >Login</a>
+    </span>
+    {{/if}}
+      {{!-- <div class="btn-group"></div>
+    <button   style="margin-left: 30px;" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      {{user.user_name}}
+        </button>  --}}
+      
+    <div class="dropdown">
+      {{#if user}}
+  <button class="dropbtn">{{user.user_name}}</button>
+  <div class="dropdown-content">
+  <a href="/users/update/{{user.email}}">Account settings</a>
+  <a href="/users/logout">Logout</a>
+
+    {{else}}
+        <button   style="margin-left: 30px;" type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          more
+          
+  {{/if}}
+        
+  </div>
+  </div>
+</div>
+    
+    </div>
+    <div style="margin-left: 60px;">
+       {{#if user}}
+    
+          {{!-- <a class="nav-link" href="#" style="color: white;">Cart<i class="fa fa-shopping-cart" style="font-size:30px;color:rgb(255, 254, 254)"></i></a> --}}
+          <button type="button" class="btn btn-light position-relative">
+            {{!-- <a class="nav-link" href="/users/cart/{{user.email}}" style="color: black;">Favorite</a>            --}}
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            
+              </span>
+              </span>
+              </button>
+        {{/if}}
+    </div>
+  </div>
+  
+
+</nav>
